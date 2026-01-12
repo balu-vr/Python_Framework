@@ -1,5 +1,5 @@
 salesforce_creds:
-  username: xyz
+  username: 
   password: 
   security_token: 
   domain: login
