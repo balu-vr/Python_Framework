@@ -1,0 +1,5 @@
+salesforce_creds:
+  username: xyz
+  password: 
+  security_token: 
+  domain: login
