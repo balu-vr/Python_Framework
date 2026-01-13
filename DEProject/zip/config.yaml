@@ -1,0 +1,103 @@
+zip_extract_invoices:
+  global:
+    application: zip
+    bidw_schema: intapp_prod_bidw
+    stage_schema: intapp_prod_stage
+    bidw_table_format: zip_
+    stage_table_format: stg_zip_
+    use_pagination: True
+    date_columns:
+      - created_at
+      - updated_at
+      - due_date
+      - approved_at
+      - start_date
+      - end_date
+      - line_items_start_date
+      - amortization_start_date
+      - amortization_end_date
+      - line_items_end_date
+      - start_time
+      - complete_time
+      - approvals_updated_at                                                                                                           
+
+  invoices:
+    api_url: https://api.ziphq.com/invoices
+
+
+zip_extract:
+  global:
+    application: zip
+    bidw_schema: intapp_prod_bidw
+    stage_schema: intapp_prod_stage
+    bidw_table_format: zip_
+    stage_table_format: stg_zip_
+    use_pagination: True
+    date_columns:
+      - created_at
+      - updated_at
+      - due_date
+      - completed_at
+      - canceled_at
+      - initiated_at
+      - approved_at
+      - start_date
+      - end_date
+      - line_items_start_date
+      - line_items_end_date
+
+  agreements:
+    api_url: https://api.ziphq.com/agreements
+
+  purchase_orders:
+    api_url: https://api.ziphq.com/purchase_orders
+
+  vendors:
+    api_url: https://api.ziphq.com/vendors
+
+
+zip_extract_requests:
+  global:
+    application: zip
+    bidw_schema: intapp_prod_bidw
+    stage_schema: intapp_prod_stage
+    bidw_table_format: zip_
+    stage_table_format: stg_zip_
+    use_pagination: True
+    date_columns:
+      - created_at
+      - updated_at
+      - due_date
+      - completed_at
+      - canceled_at
+      - initiated_at
+      - approved_at
+      - start_date
+      - end_date
+      - line_items_start_date
+      - line_items_end_date
+      - price_detail_start_date
+      - price_detail_end_date
+      - price_detail_execution_date
+      - price_detail_renewal_date
+
+  requests:
+    api_url: https://api.ziphq.com/requests    
+
+
+zip_extract_approvals:
+  global:
+    application: zip
+    bidw_schema: intapp_prod_bidw
+    stage_schema: intapp_prod_stage
+    bidw_table_format: zip_
+    stage_table_format: stg_zip_
+    use_pagination: True
+    date_columns:
+      - complete_time
+      - updated_at
+      - due_date
+      - start_time
+
+  approvals:
+    api_url: https://api.ziphq.com/approvals 
